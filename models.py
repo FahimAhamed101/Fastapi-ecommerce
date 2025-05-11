@@ -16,8 +16,3 @@ class Products(SQLModel, table=True):
     price: float
     images: List["Images"] = Relationship(back_populates="product")  
     
-class addProductModel(SQLModel):
-    pname: str
-    p_desc: str
-    price: float
-    images: List[str]

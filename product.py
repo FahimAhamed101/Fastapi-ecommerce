@@ -1,10 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlmodel import Session
 from db import get_session
-from models import addProductModel
 from services import productService
 from fastapi import APIRouter, UploadFile, File, Form, Depends, HTTPException, status
-from fastapi.staticfiles import StaticFiles
 from typing import List
 product_router = APIRouter(tags=['Product API'], prefix='/product')
 product_service = productService()
